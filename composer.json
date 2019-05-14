@@ -3,6 +3,7 @@
     "license": "proprietary",
     "require": {
         "php": "^7.2",
+        "ext-pdo-sqlite": "*",
         "sensio/framework-extra-bundle": "^5.3",
         "symfony/console": "^3.4",
         "symfony/flex": "^1.0",
