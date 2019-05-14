@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GrumpyElephant index{% endblock %}
+
+{% block body %}
+    <h1>GrumpyElephant index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for grumpy_elephant in grumpy_elephants %}
+            <tr>
+                <td>{{ grumpy_elephant.id }}</td>
+                <td>
+                    <a href="{{ path('grumpy_elephant_show', {'id': grumpy_elephant.id}) }}">show</a>
+                    <a href="{{ path('grumpy_elephant_edit', {'id': grumpy_elephant.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="2">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('grumpy_elephant_new') }}">Create new</a>
+{% endblock %}

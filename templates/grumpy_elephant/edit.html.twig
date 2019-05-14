@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit GrumpyElephant{% endblock %}
+
+{% block body %}
+    <h1>Edit GrumpyElephant</h1>
+
+    {{ include('grumpy_elephant/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('grumpy_elephant_index') }}">back to list</a>
+
+    {{ include('grumpy_elephant/_delete_form.html.twig') }}
+{% endblock %}

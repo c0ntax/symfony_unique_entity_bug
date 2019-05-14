@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GrumpyElephant{% endblock %}
+
+{% block body %}
+    <h1>GrumpyElephant</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ grumpy_elephant.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('grumpy_elephant_index') }}">back to list</a>
+
+    <a href="{{ path('grumpy_elephant_edit', {'id': grumpy_elephant.id}) }}">edit</a>
+
+    {{ include('grumpy_elephant/_delete_form.html.twig') }}
+{% endblock %}
